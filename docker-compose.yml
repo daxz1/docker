@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mynode:
+    build: ./
+    ports:
+      - "3000:3000"
+    links:
+      - database
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - database
+  database:
+    image: mongo

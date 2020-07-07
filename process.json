@@ -1,0 +1,22 @@
+{
+  "apps" : [{
+    "name"        : "mynode",
+    "script"      : "app.js",
+    "args"        : [],
+    "log_date_format" : "YYYY-MM-DD HH:mm Z",
+    "watch"       : true,
+    "watch_delay" : 1000,
+    "ignore_watch" : ["node_modules", ".git"],
+    "watch_options": {
+      "followSymlinks": false
+    },
+    "node_args"   : "",
+    "merge_logs"  : false,
+    "cwd"         : "./",
+    "exec_mode"  : "cluster",
+    "instances": "1",
+    "env": {
+      "NODE_ENV": "local"
+    }
+  }]
+}
